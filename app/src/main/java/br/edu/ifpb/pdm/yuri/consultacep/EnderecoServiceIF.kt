@@ -5,10 +5,8 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface EnderecoServiceIF {
-    @GET
-        ("ws/{cep}/json/")
+    @GET("/ws/{cep}/json/")
     fun buscarEndereco(
-        @Path
-            ("cep") cep:String
+        @Path("cep") cep: String
     ): Call<Endereco>
 }
